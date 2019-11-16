@@ -11,12 +11,13 @@ namespace LeapYears
         {
             if (year % 4 == 0)
             {
-                return true; //true - если год високосный, иначе false
+                if ((year % 100 == 0) && (year % 400 != 0))
+                {
+                    return false; //true - если год високосный, иначе false
+                }
+                return true;
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
     }
 
