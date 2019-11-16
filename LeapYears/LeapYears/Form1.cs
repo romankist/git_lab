@@ -15,5 +15,17 @@ namespace LeapYears
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //берем значение из текстбокса и конвертируем его в число:
+            int year = Convert.ToInt32( textBox1.Text );
+            //вызываем функцию для проверки:
+	        bool result = DateFunctions.IsLeapYear( year );
+	        //показываем сообщение пользователю:
+            label_Result.Text =( result ? "Високосный" : "Не високосный");
+	        //MessageBox.Show( result ? "Високосный" : "Не високосный"); 
+
+        }
     }
 }
